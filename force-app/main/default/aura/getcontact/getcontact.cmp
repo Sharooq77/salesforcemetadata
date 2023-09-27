@@ -1,0 +1,27 @@
+<aura:component controller="getconactcontroller" >
+    
+    <aura:handler name="init" value="{!this}" action ="{!c.getcon}"/>
+    <aura:attribute  name= "contactli" type="list"/>  
+    <div class= "slds">
+  
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.contactli}" var="con">
+                    <tr>
+                        <td>{!con.Name}</td>
+                        <td>{!con.Email}</td>
+                        <td>{!con.Phone}</td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

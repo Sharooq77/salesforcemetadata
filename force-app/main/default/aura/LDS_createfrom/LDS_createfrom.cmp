@@ -1,0 +1,43 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome">
+    <aura:attribute name="accountRecord" type="Object"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Name,Email,Phone"
+                      targetFields="{!v.accountRecord}"
+                      targetError="{!v.recordLoadError}"
+                           
+                      />
+    
+    <lightning:card title= "contact form"> 
+        <div class="slds-box" >
+            <div class="slds-m-horizontal_xx-small">
+                <div class ="slds-from" >
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Enter Name</label>
+                        <div class="slds-form-element__control">
+                            <lightning:formattedText value="{!v.accountRecord.Name}" />
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Enter Number</label>
+                        <div class="slds-form-element__control">
+                            <lightning:formattedPhone value="{!v.accountRecord.Phone}" />
+                        </div>
+                    </div>  
+                    
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Enter Email</label>
+                        <div class="slds-form-element__control">
+                            <lightning:formattedEmail value="{!v.accountRecord.Email}" />
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        
+    </lightning:card>
+    
+</aura:component>

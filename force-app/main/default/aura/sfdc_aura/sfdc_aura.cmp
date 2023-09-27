@@ -1,0 +1,5 @@
+<aura:component>
+<lightning:card title="this an aura from vs code" iconName="standard:account">
+    <lightning:button variant="base" label="click me" title="Base action" onclick="{! c.handleClick }"/>
+</lightning:card>
+</aura:component>

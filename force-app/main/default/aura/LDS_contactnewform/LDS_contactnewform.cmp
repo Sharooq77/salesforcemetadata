@@ -1,0 +1,48 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:handler name = "init" value = "{!this}" action = "{!c.allocateMemory}"/>
+    <aura:attribute  name = "contactform" type="Contact"/>
+    
+    <force:recordData aura:id="contactnewform"
+                      targetFields= "{!v.contactform}"
+                      fields="FirstName,LastName,Phone,Email"
+                      mode="EDIT"
+                      />
+    <lightning:card title= "contact new form "> 
+        <div class="slds-box" >
+            <div class="slds-m-horizontal_xx-small">
+                <div class ="slds-from" >
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">First Name</label>
+                        <div class="slds-form-element__control">
+                            <lightning:input  value="{!v.contactform.FirstName}"/>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01"> Last Name</label>
+                        <div class="slds-form-element__control">
+                            <lightning:input  value="{!v.contactform.LastName}"/>
+                        </div>
+                    </div>  
+                    
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Enter Phone</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputText   value="{!v.contactform.Phone}"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Enter Email</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputText  value="{!v.contactform.Email}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="slds-align_absolute-center" >
+            <lightning:button variant="brand" label="SAVE" onclick="{!c.createContact}" />
+        </div>
+    </lightning:card>
+</aura:component>

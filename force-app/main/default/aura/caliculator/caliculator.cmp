@@ -1,0 +1,36 @@
+<aura:component implements="force:appHostable" >
+    <aura:attribute name="fvalue" type ="integer"/>
+    <aura:attribute name="svalue" type ="integer"/>
+    <aura:attribute name="result" type ="string"/>
+    
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <span>1</span>
+        </div>
+        <div class="slds-col">
+            <span>2</span>
+        </div>
+        <div class="slds-col">
+            <lightning:card title ="caliculator" iconName ="standard:calculated_insights">
+                <div class="slds-m-horizontal_x-small">
+                <lightning:input type="number" label="enter value" value ="{!v.fvalue}"/>
+                <lightning:input type="number" label="enter value" value ="{!v.svalue}"/>   
+                <div class="slds-align_absolute-center" style="height:5rem">
+                <lightning:button label ="sum" variant ="brand" onclick ="{!c.sum}"/>
+                    <lightning:button label ="sub" variant ="success" onclick ="{!c.sub}"/>
+                    <lightning:button label ="mul" variant ="destructive" onclick ="{!c.mul}"/>
+                     </div>
+                    
+                    <span class="slds-badge slds-theme_success"> {!v.result}</span>
+                </div>
+            </lightning:card>
+        </div>
+        <div class="slds-col">
+            <span>3</span>
+        </div>
+        <div class="slds-col">
+            <span>5</span>
+        </div>
+    </div>            
+    
+</aura:component>

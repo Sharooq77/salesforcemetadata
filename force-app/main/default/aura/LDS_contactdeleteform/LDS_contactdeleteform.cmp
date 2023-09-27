@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+       
+       
+    <force:recordData aura:id="deletecon"
+                      targetFields= "{!v.contactform}"
+                      fields="Id"
+                      recordId="{!v.recordId}"
+                      />
+	
+    <div class="slds-align_absolute-center" >
+            <lightning:button variant="Destructive" label="delete" onclick="{!c.deleteContact}" />
+        </div>
+</aura:component>

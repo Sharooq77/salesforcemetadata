@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+   <aura:attribute name="myvalue" type ="string"/>
+    <lightning:card  title="Hello" iconname="Standard:account">
+        <div class="slds-m-horizontal_xx-small">
+         <lightning:input value ="{!v.myvalue}"  />
+            </div>
+ 
+  <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+<span class="slds-assistive-text">error</span>
+<span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+
+</span>
+<h2>
+<a href="#">=={!v.myvalue}==</a>
+</h2>
+<div class="slds-notify__close">
+<button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+
+<span class="slds-assistive-text">Close</span>
+</button>
+</div>
+</div>
+    </lightning:card>
+ 
+</aura:component>

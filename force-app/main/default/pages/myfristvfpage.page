@@ -1,0 +1,23 @@
+<apex:page Controller="fromcontroller">
+    
+        
+       <apex:form >
+    <apex:pageBlock title="contact infromation">
+          <apex:pageBlockButtons >
+              <apex:commandButton value="save" action="{!createaccount1}" rendered="{!not(isdisplay)}"/>
+               <apex:commandButton value="Okay" action="{!loadfrom}" rendered="{!isdisplay}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="personal info" columns="2" rendered="{!not(isdisplay)}">
+            <apex:inputtext label="name" value="{!name}" required="true"/>
+            <apex:inputtext label="AnnualRevenue" value="{!AnnualRevenue}"/>
+            <apex:inputText label="Phone" value="{!Phone}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="acknowledgement" rendered="{!isdisplay}">
+            thankyou!
+        </apex:pageBlockSection>
+         
+           </apex:pageBlock>
+   
+    </apex:form>
+    
+</apex:page>

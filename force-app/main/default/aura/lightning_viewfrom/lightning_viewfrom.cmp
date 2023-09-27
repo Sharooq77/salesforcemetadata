@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <lightning:card title="Lightning view form">
+        <div class ="slds-box slds-m-horizontal_x-small">
+            
+            <lightning:recordViewForm
+                                      aura:id=  "vf"                        
+                                      recordId="{!v.recordId}"
+                                      objectApiName="Contact"
+                                      density = "compact">
+                
+                <lightning:outputField fieldName="FirstName"/>
+                <lightning:outputField fieldName="LastName"/>
+                <lightning:outputField fieldName="Email"/>  
+                <lightning:outputField fieldName="LeadSource"/>  
+            </lightning:recordViewForm>
+        </div>       
+    </lightning:card> 
+</aura:component>

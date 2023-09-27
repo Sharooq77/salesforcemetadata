@@ -1,0 +1,44 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="contacteditform" type="Contact"/>  
+    
+    <force:recordData aura:id="contactrecord"
+                      recordId="{!v.recordId}"
+                      fields="FirstName,LastName,Email"
+                      targetFields="{!v.contacteditform}"
+                      mode ="EDIT"
+                      /> 
+    
+    <lightning:card title= "contact edit form"> 
+        <div class="slds-box" >
+            <div class="slds-m-horizontal_xx-small">
+                <div class ="slds-from" >
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Frist Name</label>
+                        <div class="slds-form-element__control">
+                            <lightning:input value="{!v.contacteditform.FirstName}" />
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01"> Last Name</label>
+                        <div class="slds-form-element__control">
+                            <lightning:input value="{!v.contacteditform.LastName}" />
+                        </div>
+                    </div>  
+                    
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <label class="slds-form-element__label" for="horizontal-input-id-01">Enter Email</label>
+                        <div class="slds-form-element__control">
+                            <lightning:input value="{!v.contacteditform.Email}" />  
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>        
+        </div>
+        <div class="slds-align_absolute-center" style="height:5rem">
+            <lightning:button variant="brand" label="UPDATE" onclick="{!c.updatecontact}" />
+        </div>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,22 @@
+<apex:page >
+    <div style ="text-align">
+        <h1>
+            hello everyone<br/>
+            welocme to salesforce <br/>
+            {!$user.firstname} <br/>
+            
+        </h1>
+        
+        
+        <h3>
+            
+            hello everyone<br/>
+            welocme to salesforce <br/>    
+            {!$user.firstname}
+            
+        </h3>
+        
+    </div>
+    
+    
+</apex:page>

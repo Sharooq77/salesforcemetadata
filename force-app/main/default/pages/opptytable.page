@@ -1,0 +1,28 @@
+<apex:page standardController="opportunity" recordSetVar="opptyrecords">
+    <style>
+        .greenclass{
+        background-color: coral;
+        color: blue	 !important;
+        font-weight :900;
+        }
+        .yellowclass{
+        background-color: green;
+        color: blue !important;
+        }
+    </style>
+    
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!opptyrecords}" var="rec">
+                <apex:column headerValue="action">
+                <apex:commandLink value="edit " action="/{!rec.ID}/e?retURL=/apex/opptytable" styleClass="{!if(rec.stagename=='Closed Won','greenclass','yellowclass')}"/>
+                </apex:column> 
+                <apex:column headerValue="name" value="{!rec.Name}" styleClass="{!if(rec.stagename=='Closed Won','greenclass','yellowclass')}"/>
+                <apex:column value="{!rec.amount}" styleClass="{!if(rec.stagename=='Closed Won','greenclass','yellowclass')}"/>
+                <apex:column value="{!rec.stagename}" styleClass="{!if(rec.stagename=='Closed Won','greenclass','yellowclass')}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <c:LDS_createfrom/>
+</aura:component>

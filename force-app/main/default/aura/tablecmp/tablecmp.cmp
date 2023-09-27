@@ -1,0 +1,17 @@
+<aura:component controller="tablecmpcontroller" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="contactdata" type="List" />
+    
+    <aura:attribute name="contactcolumns" type="List" default="[
+        {label: 'Contact Name', fieldName:'Name', type:'text'},
+        {label: 'Email', fieldName:'Email', type:'email'},
+        {label: 'Contact ID', fieldName:'Id', type:'text'}
+    ]"/> 
+    
+    <lightning:button variant="brand" label="Fetch Data" onclick="{!c.Clickjs}" />
+    
+    <div>{!v.contactdata.length} contacts loaded</div>
+    
+    <lightning:datatable keyField="Id"
+                         columns="{!v.contactcolumns}"
+                         data="{!v.contactdata}" />
+</aura:component>

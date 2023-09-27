@@ -1,0 +1,4 @@
+<aura:component>
+    <lightning:card title="this an aura cmp from vs code" iconName="standard:account"></lightning:card>
+    <lightning:button variant="brand" label="click me" title="Brand action" onclick="{! c.handleClick }" />
+</aura:component>

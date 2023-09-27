@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="filedlist" type="string[]" default="['FristName','LastName',Email	]"/>
+    
+    <lightning:card title ="recordform">
+               <div class ="slds-box slds-m-horizontal_x-small">
+        <lightning:recordform aura:id="ef"
+                          objectApiName="Contact"
+                          layoutType="Full"
+                              fileds="{!v.filedlist}"
+                             
+                              columns="2"
+                              mode="Edit">
+    
+    
+    </lightning:recordform>
+        </div>
+    </lightning:card>
+    
+	
+</aura:component>

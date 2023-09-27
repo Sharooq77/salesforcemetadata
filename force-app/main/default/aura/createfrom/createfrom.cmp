@@ -1,0 +1,22 @@
+<aura:component controller="contacfromcontroller" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="fname" type="String" />
+    <aura:attribute name="lname" type="String" />
+   
+    <lightning:card title="Contact  Form" iconName="standard:contact">
+        <div class ="slds-from">
+        <div class="slds-form-element slds-form-element_horizontal">
+            <label class="slds-form-element__label" for="horizontal-input-id-01">Enter First Name</label>
+            <div class="slds-form-element__control">
+                <lightning:input value="{!v.fname}" />
+            </div>
+            </div>
+        </div>
+        <div class="slds-form-element slds-form-element_horizontal">
+            <label class="slds-form-element__label" for="horizontal-input-id-01">Enter Last Name</label>
+            <div class="slds-form-element__control">
+                <lightning:input value="{!v.lname}" />
+            </div>
+        </div>
+        <lightning:button variant="success" label="SAVE" onclick="{!c.savecontact}" />
+    </lightning:card>
+</aura:component>
