@@ -13,7 +13,7 @@ public class CalculatorTest {
         Integer result = Calculator.subtract(10, 4);
         System.assertEquals(6, result, 'Subtraction result is incorrect.');
     }
-    
+    // changes can me done by test 1 
     @isTest
     static void testMultiplication() {
         Integer result = Calculator.multiply(7, 2);
