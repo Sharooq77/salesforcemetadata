@@ -10,6 +10,7 @@ public class collectionmap {
         nameandnum.put('sai',3);
         nameandnum.put ('vamsi',4);
         system.debug(' totalnameandnum=='+nameandnum);
+        // changes can be test2
         
         //size method
         nameandnum.size();
