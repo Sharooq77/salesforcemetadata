@@ -2,7 +2,7 @@
 public class AccountManager {
     public static void updateAccountRating() {
         List<Account> accountsToUpdate = new List<Account>();
-        
+// changes can be done in test1        
         for (Account acc : [SELECT Id, AnnualRevenue, Rating FROM Account]) {
             if (acc.AnnualRevenue >= 1000000) {
                 acc.Rating = 'High';
