@@ -24,6 +24,7 @@ public class CalculatorTest {
         Integer result = Calculator.divide(8, 2);
         System.assertEquals(4, result, 'Division result is incorrect.');
     }
+    // changes can be done by test2
     
     @isTest
     static void testDivisionByZero() {
