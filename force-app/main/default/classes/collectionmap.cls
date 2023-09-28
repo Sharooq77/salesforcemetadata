@@ -3,6 +3,7 @@ public class collectionmap {
     public void mapmethod(){
         
         map<string,integer>nameandnum = new  map<string,integer>{'jamal'=>1,'nikhil'=>2}; 
+        // change by test1
             
          system.debug('nameandnum=='+nameandnum);
         // put method
