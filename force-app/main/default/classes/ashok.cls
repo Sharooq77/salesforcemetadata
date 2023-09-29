@@ -30,7 +30,7 @@ public integer firstvalue;
         //return sub;
         system.debug(mul);
     }
-    
+    //test 2 changes 
   public integer multiplication (integer firstvalue,integer secondvalue){
         integer mul=firstvalue*secondvalue;
         return mul;    
